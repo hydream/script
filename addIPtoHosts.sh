@@ -1,3 +1,8 @@
 #vi ansible hosts
-echo "!!!!!!!!!!!!!add ip of three container"
+rm -rf /etc/ansible/TomcatPlaybook
 vi /etc/ansible/TomcatPlaybook/hosts
+
+#github git Playbook, use for install tomcat
+
+cd /etc/ansible/
+git clone https://github.com/hydream/TomcatPlaybook

@@ -1,8 +1,3 @@
-#github git Playbook, use for install tomcat
-cd /etc/ansible/
-rm -rf /etc/ansible/TomcatPlaybook
-cd /etc/ansible/
-git clone https://github.com/hydream/TomcatPlaybook
 
 #run Playbook
 cd /etc/ansible/TomcatPlaybook
