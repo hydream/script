@@ -15,6 +15,7 @@ mkdir  /etc/ansible/
 #install SSH
 echo "install SSH, please wait!!"
 sudo apt-get install -y openssh-server
+sudo apt-get install -y sshpass
 sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 #install docker
