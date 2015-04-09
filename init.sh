@@ -35,10 +35,3 @@ docker inspect prevayler|grep -i address
 echo "this three ip is very import! Please write down"
 
 
-#------------------------------------------------------------------------------------------------------------------------------
-
-#import public key use for ansible
-echo "!!!!!!!!!!!!!!!!!!!!!Import public key use for ansible"
-mkdir root/.ssh
-
-vi /root/.ssh/authorized_keys
