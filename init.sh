@@ -6,19 +6,20 @@
 
 #install ansible
 echo "install ansible, please wait!!"
-sudo apt-get install python-pip python-dev build-essential git
+sudo apt-get update
+sudo apt-get install -y python-pip python-dev build-essential git
 sudo pip install ansible
 mkdir  /etc/ansible/
 #echo "192.168.0.90">>/etc/ansible/hosts
 
 #install SSH
 echo "install SSH, please wait!!"
-sudo apt-get install openssh-server
+sudo apt-get install -y openssh-server
 sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 #install docker
 echo "install docker, please wait!!"
-sudo apt-get docker.io
+sudo apt-get install -y docker.io
 
 #docker run -d -p 22 -p 8081:8080 --name="web" tomcat:8-jre8 /usr/sbin/sshd -D
 
