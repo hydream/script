@@ -40,7 +40,9 @@ git clone https://github.com/hydream/TomcatPlaybook
 docker inspect web|grep -i address
 docker inspect app|grep -i address
 docker inspect prevayler|grep -i address
-echo "this three ip is very import! Please write down"
+#echo "this three ip is very import! Please write down"
+echo -e "\033[31m this three ip is very import! Please write down \033[0m"
+
 
 
 
