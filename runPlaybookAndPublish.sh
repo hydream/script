@@ -1,3 +1,9 @@
+#github git Playbook, use for install tomcat
+cd /etc/ansible/
+rm -rf /etc/ansible/TomcatPlaybook
+cd /etc/ansible/
+git clone https://github.com/hydream/TomcatPlaybook
+
 #run Playbook
 cd /etc/ansible/TomcatPlaybook
 ansible-playbook -i hosts site.yml
@@ -11,4 +17,4 @@ cd /tmp
 rm -rf /tmp/test
 git clone https://github.com/hydream/test
 cd /etc/ansible/TomcatPlaybook
-ansible  -i hosts -m copy -a 'src=/tmp/test dest=/usr/share/tomcat/webapps force=yes'
+ansible -i hosts -m copy -a 'src=/tmp/test dest=/usr/share/tomcat/webapps force=yes'
