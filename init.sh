@@ -28,10 +28,19 @@ docker run -d -p 22 -p 8081:8080 --name="web"  hydream/ssh:3.0
 docker run -d -p 22 -p 8082:8080 --name="app"   hydream/ssh:3.0
 docker run -d -p 22 -p 8083:8080 --name="prevayler"   hydream/ssh:3.0
 
+#github git Playbook, use for install tomcat
+echo "github git Playbook, use for install tomcat"
+cd /etc/ansible/
+rm -rf /etc/ansible/TomcatPlaybook
+cd /etc/ansible/
+git clone https://github.com/hydream/TomcatPlaybook
+
 #get ip of three container
 docker inspect web|grep -i address
 docker inspect app|grep -i address
 docker inspect prevayler|grep -i address
 echo "this three ip is very import! Please write down"
+
+
 
 
