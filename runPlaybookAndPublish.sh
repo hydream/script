@@ -12,4 +12,4 @@ cd /tmp
 rm -rf /tmp/test
 git clone https://github.com/hydream/test
 cd /etc/ansible/TomcatPlaybook
-ansible -i hosts -m copy -a 'src=/tmp/test dest=/usr/share/tomcat/webapps force=yes'
+ansible all -i /etc/ansible/TomcatPlaybook/hosts -m copy -a 'src=/tmp/test dest=/usr/share/tomcat/webapps force=yes'
